@@ -90,3 +90,8 @@ a {
 .toggle .line3 {
   transform: rotate(45deg) translate(-4px, -5px);
 }
+
+.navLink:hover {
+  color: #854ce6;
+  transition: 0.2s ease-in;
+}
