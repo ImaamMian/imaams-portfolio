@@ -1,0 +1,92 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  box-sizing: border-box;
+
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 8vh;
+  background: #191924;
+
+}
+
+.name {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.navMenu {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 3rem;
+}
+
+.toggler {
+  display: none;
+}
+
+.toggler div {
+  width: 2.5rem;
+  height: 0.2rem;
+  margin: 0.4rem;
+  background: white;
+  transition: 0.3s ease-in
+}
+
+@media screen and (max-width:768px) {
+  .toggler {
+    display: block;
+    cursor: pointer;
+  }
+
+  .navMenu {
+    position: fixed;
+    top: 7vh;
+    right: 0;
+    width: 50vh;
+    height: 93vh;
+    background: #2c2c34;
+    flex-direction: column;
+    transform: translateX(100%);
+    transition: 0.5s ease-in;
+  }
+}
+
+.navActive {
+  transform: translateX(0);
+}
+
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-4px, 5px);
+}
+
+.toggle .line2 {
+  opacity: 0;
+}
+
+.toggle .line3 {
+  transform: rotate(45deg) translate(-4px, -5px);
+}
